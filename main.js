@@ -39,7 +39,8 @@ function updateTextbox(e){
 	}
 }
 
-function copyToClipboard(){
+function copyToClipboard(e){
+	e.preventDefault();
 	var copyText = document.getElementById("output");
 	copyText.select();
 	copyText.setSelectionRange(0, 99999); /* For mobile devices */
