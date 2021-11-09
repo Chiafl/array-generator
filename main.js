@@ -16,7 +16,8 @@ function matrixToString(mat){
 	return str;
 }
 
-function updateTextbox(){
+function updateTextbox(e){
+	e.preventDefault();
 	var textbox = document.getElementById("output");
 	var nRow = parseInt(document.getElementById("input-num-row").value);
 	var nCol = parseInt(document.getElementById("input-num-col").value);
@@ -39,6 +40,7 @@ function updateTextbox(){
 }
 
 function copyToClipboard(){
+	e.preventDefault();
 	var copyText = document.getElementById("output");
 	copyText.select();
 	copyText.setSelectionRange(0, 99999); /* For mobile devices */
