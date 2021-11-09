@@ -82,22 +82,33 @@
     <form>
       <div class="form-group row textbox-container">
         <div class="col">
-          <label for="input-num-row"># of rows</label>
+          <label for="input-num-row">Rows</label>
           <input type="number" class="form-control" id="input-num-row" value="1" placeholder="# of rows"/>
         </div>
         <div class="col">
-          <label for="input-num-col"># of columns</label>
+          <label for="input-num-col">Cols</label>
           <input type="number" class="form-control" id="input-num-col" value="10" placeholder="# of columns"/>
         </div>
         <div class="col">
-          <label for="input-min">Min value</label>
+          <label for="input-min">Min</label>
           <input type="number" class="form-control" id="input-min" value="0" placeholder="min"/>
         </div>
         <div class="col">
-          <label for="input-max">Max value</label>
+          <label for="input-max">Max</label>
           <input type="number" class="form-control" id="input-max" value="10" placeholder="max"/>
         </div>
-      </div>
+        <div class="col-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <label for="input-max">Property</label>
+              <select class="form-control custom-select" id="input-property">
+                <option value="random" selected>Random</option>
+                <option value="ascending">Ascending</option>
+                <option value="descending">Descending</option>
+              </select>
+            </div>
+          </div>
+        </div>
 
       <div class="form-group textbox-container">
         <div class="bd-clipboard">

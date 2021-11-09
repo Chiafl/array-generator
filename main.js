@@ -16,14 +16,24 @@ function matrixToString(mat){
 	return str;
 }
 
-function updateTextbox(){
+function updateTextbox(e){
+	e.preventDefault();
 	var textbox = document.getElementById("output");
 	var nRow = parseInt(document.getElementById("input-num-row").value);
 	var nCol = parseInt(document.getElementById("input-num-col").value);
 	var nMin = parseInt(document.getElementById("input-min").value);
 	var nMax = parseInt(document.getElementById("input-max").value);
+	var nProperty = document.getElementById("input-property").value;
 	if (nRow && nCol){
 		var mat = generateMatrix(nRow, nCol, nMin, nMax);
+		if (nProperty != 'random'){
+			mat.forEach(arr=>{
+				arr.sort((a,b)=>{return a-b;});
+				if (nProperty == 'descending'){
+					arr.reverse();
+				}	
+			})
+		}
 		var m = matrixToString(mat);
 		textbox.value = nRow == 1? m : "["+m+"]";
 	}
