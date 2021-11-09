@@ -40,7 +40,6 @@ function updateTextbox(e){
 }
 
 function copyToClipboard(){
-	e.preventDefault();
 	var copyText = document.getElementById("output");
 	copyText.select();
 	copyText.setSelectionRange(0, 99999); /* For mobile devices */
