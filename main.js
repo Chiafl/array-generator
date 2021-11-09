@@ -16,8 +16,7 @@ function matrixToString(mat){
 	return str;
 }
 
-function updateTextbox(e){
-	e.preventDefault();
+function updateTextbox(){
 	var textbox = document.getElementById("output");
 	var nRow = parseInt(document.getElementById("input-num-row").value);
 	var nCol = parseInt(document.getElementById("input-num-col").value);
